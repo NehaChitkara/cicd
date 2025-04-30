@@ -1,4 +1,4 @@
-name: Lint JavaScript
+name: Lint and Format Check
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  lint:
+  check:
     runs-on: ubuntu-latest
 
     steps:
@@ -22,5 +22,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run ESLint
+      - name: Run ESLint (fail on errors)
         run: npx eslint . --ext .js,.jsx
+
+      - name: Run Prettier (fail on formatting issues)
+        run: npx prettier . --check
