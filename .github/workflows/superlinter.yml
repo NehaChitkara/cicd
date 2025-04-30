@@ -1,4 +1,4 @@
-  name: Lint JavaScript
+name: Lint JavaScript
 
 on:
   push:
