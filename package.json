@@ -1,0 +1,11 @@
+{
+    "name": "lint-check-example",
+    "version": "1.0.0",
+    "devDependencies": {
+      "eslint": "^8.0.0"
+    },
+    "scripts": {
+      "lint": "eslint ."
+    }
+  }
+  
